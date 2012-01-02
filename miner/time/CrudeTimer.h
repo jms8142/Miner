@@ -1,7 +1,54 @@
+#ifndef CRUDETIMER_H
+#define CRUDETIMER_H
+//------------------------------------------------------------------------
 //
-//  CrudeTimer.h
-//  miner
+//  Name:   CrudeTimer.h
 //
-//  Created by John Skrzypek on 12/29/11.
-//  Copyright 2011 One Eleven Interactive. All rights reserved.
+//  Desc:   timer to measure time in seconds
 //
+//  Author: Mat Buckland 2002 (fup@ai-junkie.com)
+//
+//------------------------------------------------------------------------
+
+//this library must be included
+//#pragma comment(lib, "winmm.lib")
+
+//#include <windows.h>
+#include <time.h>
+
+#include <iostream>
+using std::cout;
+
+#define Clock CrudeTimer::Instance()
+
+class CrudeTimer
+{
+private:
+    
+    
+    //set to the time (in seconds) when class is instantiated
+    double m_dStartTime;
+    
+    //set the start time
+    CrudeTimer(){m_dStartTime = time(NULL) * 0.001;}
+    
+    //copy ctor and assignment should be private
+    CrudeTimer(const CrudeTimer&);
+    CrudeTimer& operator=(const CrudeTimer&);
+    
+public:
+    
+    static CrudeTimer* Instance();
+    
+    //returns how much time has elapsed since the timer was started
+    double GetCurrentTime(){ return time(NULL) * 0.001 - m_dStartTime;}
+    
+};
+
+
+
+
+
+
+
+#endif
