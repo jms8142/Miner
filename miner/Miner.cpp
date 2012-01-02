@@ -1,32 +1,14 @@
 #include "Miner.h"
-#include "MinerOwnedStates.h"
 
-Miner::Miner(int id):BaseGameEntity(id),
-m_Location(shack),
-m_iGoldCarried(0),
-m_iMoneyInBank(0),
-m_iThirst(0),
-m_iFatigue(0),
-m_pCurrentState(GoHomeAndSleepTilRested::Instance())
-
-{}
-
-//--------------------------- ChangeState -------------------------------------
-//-----------------------------------------------------------------------------
-void Miner::ChangeState(State* pNewState)
+bool Miner::HandleMessage(const Telegram& msg)
 {
-    //make sure both states are both valid before attempting to 
-    //call their methods
-    assert (m_pCurrentState && pNewState);
-    
-    //call the exit method of the existing state
-    m_pCurrentState->Exit(this);
-    
-    //change state to the new state
-    m_pCurrentState = pNewState;
-    
-    //call the entry method of the new state
-    m_pCurrentState->Enter(this);
+    return m_pStateMachine->HandleMessage(msg);
+}
+
+void Miner::Update()
+{
+    m_iThirst += 1;
+    m_pStateMachine->Update();
 }
 
 
@@ -54,18 +36,6 @@ bool Miner::Thirsty()const
     if (m_iThirst >= ThirstLevel){return true;}
     
     return false;
-}
-
-
-//-----------------------------------------------------------------------------
-void Miner::Update()
-{
-    m_iThirst += 1;
-    
-    if (m_pCurrentState)
-    {
-        m_pCurrentState->Execute(this);
-    }
 }
 
 

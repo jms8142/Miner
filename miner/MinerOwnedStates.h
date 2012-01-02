@@ -13,7 +13,7 @@
 
 
 class Miner;
-
+struct Telegram;
 
 //------------------------------------------------------------------------
 //
@@ -22,7 +22,7 @@ class Miner;
 //  to VisitBankAndDepositGold. If he gets thirsty he'll change state
 //  to QuenchThirst
 //------------------------------------------------------------------------
-class EnterMineAndDigForNugget : public State
+class EnterMineAndDigForNugget : public State<Miner>
 {
 private:
     
@@ -42,6 +42,8 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner* miner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 //------------------------------------------------------------------------
@@ -50,7 +52,7 @@ public:
 //  miner is subsequently wealthy enough he'll walk home, otherwise he'll
 //  keep going to get more gold
 //------------------------------------------------------------------------
-class VisitBankAndDepositGold : public State
+class VisitBankAndDepositGold : public State<Miner>
 {
 private:
     
@@ -70,6 +72,8 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner* miner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
@@ -78,7 +82,7 @@ public:
 //  miner will go home and sleep until his fatigue is decreased
 //  sufficiently
 //------------------------------------------------------------------------
-class GoHomeAndSleepTilRested : public State
+class GoHomeAndSleepTilRested : public State<Miner>
 {
 private:
     
@@ -98,13 +102,15 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner* miner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
 //------------------------------------------------------------------------
 //
 //------------------------------------------------------------------------
-class QuenchThirst : public State
+class QuenchThirst : public State<Miner>
 {
 private:
     
@@ -124,6 +130,24 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner* miner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
+};
+
+class EatStew : public State<Miner>
+{
+    private:
+    EatStew(){}
+    
+    EatStew(const EatStew&);
+    EatStew& operator=(const EatStew&);
+    
+public:
+    static EatStew* Instance();
+    virtual void Enter(Miner* miner);
+    virtual void Execute(Miner* miner);
+    virtual void Exit(Miner* miner);
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
