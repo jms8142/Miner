@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071AAFFB14ABCA1F00DC736C /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 071AAFFA14ABCA1F00DC736C /* EntityManager.cpp */; };
+		0725EC6414ACE44500CCFB92 /* CrudeTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0725EC6214ACE44500CCFB92 /* CrudeTimer.cpp */; };
+		07377A4D14ABD0620069A569 /* MessageDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07377A4C14ABD0620069A569 /* MessageDispatcher.cpp */; };
+		075CC9D114A192BB00CEE144 /* MinerOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075CC9CF14A192BB00CEE144 /* MinerOwnedStates.cpp */; };
 		078C6AC4149C476100449D0D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078C6AC3149C476100449D0D /* main.cpp */; };
+		078C6ACD149C479C00449D0D /* BaseGameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078C6ACB149C479C00449D0D /* BaseGameEntity.cpp */; };
+		078CF4A014A187DB008B30D1 /* Miner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078CF49F14A187DB008B30D1 /* Miner.cpp */; };
+		07FAC8BA14B2457100391B9C /* MinersWife.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FAC8B814B2457100391B9C /* MinersWife.cpp */; };
+		07FAC8BE14B2460200391B9C /* MinersWifeOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FAC8BC14B2460200391B9C /* MinersWifeOwnedStates.cpp */; };
+		07FAC8C114B2560200391B9C /* cat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FAC8BF14B2560200391B9C /* cat.cpp */; };
+		07FAC8C414B25B9B00391B9C /* CatOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FAC8C214B25B9B00391B9C /* CatOwnedStates.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +33,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		071AAFF614AA492F00DC736C /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
+		071AAFF814ABBF7700DC736C /* MessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageDispatcher.h; path = Messaging/MessageDispatcher.h; sourceTree = "<group>"; };
+		071AAFF914ABBFC700DC736C /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		071AAFFA14ABCA1F00DC736C /* EntityManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityManager.cpp; sourceTree = "<group>"; };
+		071AAFFC14ABCE0900DC736C /* Telegram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Telegram.h; path = Messaging/Telegram.h; sourceTree = "<group>"; };
+		0725EC6214ACE44500CCFB92 /* CrudeTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrudeTimer.cpp; path = time/CrudeTimer.cpp; sourceTree = "<group>"; };
+		0725EC6314ACE44500CCFB92 /* CrudeTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrudeTimer.h; path = time/CrudeTimer.h; sourceTree = "<group>"; };
+		07377A4C14ABD0620069A569 /* MessageDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageDispatcher.cpp; path = Messaging/MessageDispatcher.cpp; sourceTree = "<group>"; };
+		075CC9CB14A1917600CEE144 /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
+		075CC9CE14A1928300CEE144 /* EntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityNames.h; sourceTree = "<group>"; };
+		075CC9CF14A192BB00CEE144 /* MinerOwnedStates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinerOwnedStates.cpp; sourceTree = "<group>"; };
+		075CC9D014A192BB00CEE144 /* MinerOwnedStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinerOwnedStates.h; sourceTree = "<group>"; };
+		0786AC4314ABDA2100030129 /* MessageTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageTypes.h; path = Messaging/MessageTypes.h; sourceTree = "<group>"; };
 		078C6ABF149C476100449D0D /* miner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = miner; sourceTree = BUILT_PRODUCTS_DIR; };
 		078C6AC3149C476100449D0D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		078C6AC5149C476100449D0D /* miner.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = miner.1; sourceTree = "<group>"; };
+		078C6ACB149C479C00449D0D /* BaseGameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseGameEntity.cpp; sourceTree = "<group>"; };
+		078C6ACC149C479C00449D0D /* BaseGameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGameEntity.h; sourceTree = "<group>"; };
+		078C6AD6149C499700449D0D /* Miner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Miner.h; sourceTree = "<group>"; };
+		078CF49D14A18712008B30D1 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		078CF49F14A187DB008B30D1 /* Miner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Miner.cpp; sourceTree = "<group>"; };
+		07FAC8B814B2457100391B9C /* MinersWife.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinersWife.cpp; sourceTree = "<group>"; };
+		07FAC8B914B2457100391B9C /* MinersWife.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinersWife.h; sourceTree = "<group>"; };
+		07FAC8BC14B2460200391B9C /* MinersWifeOwnedStates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinersWifeOwnedStates.cpp; sourceTree = "<group>"; };
+		07FAC8BD14B2460200391B9C /* MinersWifeOwnedStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinersWifeOwnedStates.h; sourceTree = "<group>"; };
+		07FAC8BF14B2560200391B9C /* cat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cat.cpp; sourceTree = "<group>"; };
+		07FAC8C014B2560200391B9C /* cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cat.h; sourceTree = "<group>"; };
+		07FAC8C214B25B9B00391B9C /* CatOwnedStates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CatOwnedStates.cpp; sourceTree = "<group>"; };
+		07FAC8C314B25B9B00391B9C /* CatOwnedStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatOwnedStates.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +96,32 @@
 			children = (
 				078C6AC3149C476100449D0D /* main.cpp */,
 				078C6AC5149C476100449D0D /* miner.1 */,
+				078C6ACB149C479C00449D0D /* BaseGameEntity.cpp */,
+				078C6ACC149C479C00449D0D /* BaseGameEntity.h */,
+				078C6AD6149C499700449D0D /* Miner.h */,
+				078CF49D14A18712008B30D1 /* State.h */,
+				078CF49F14A187DB008B30D1 /* Miner.cpp */,
+				075CC9CB14A1917600CEE144 /* Locations.h */,
+				075CC9CE14A1928300CEE144 /* EntityNames.h */,
+				075CC9CF14A192BB00CEE144 /* MinerOwnedStates.cpp */,
+				075CC9D014A192BB00CEE144 /* MinerOwnedStates.h */,
+				071AAFF614AA492F00DC736C /* StateMachine.h */,
+				071AAFF814ABBF7700DC736C /* MessageDispatcher.h */,
+				071AAFF914ABBFC700DC736C /* EntityManager.h */,
+				071AAFFA14ABCA1F00DC736C /* EntityManager.cpp */,
+				071AAFFC14ABCE0900DC736C /* Telegram.h */,
+				07377A4C14ABD0620069A569 /* MessageDispatcher.cpp */,
+				0786AC4314ABDA2100030129 /* MessageTypes.h */,
+				0725EC6214ACE44500CCFB92 /* CrudeTimer.cpp */,
+				0725EC6314ACE44500CCFB92 /* CrudeTimer.h */,
+				07FAC8B814B2457100391B9C /* MinersWife.cpp */,
+				07FAC8B914B2457100391B9C /* MinersWife.h */,
+				07FAC8BC14B2460200391B9C /* MinersWifeOwnedStates.cpp */,
+				07FAC8BD14B2460200391B9C /* MinersWifeOwnedStates.h */,
+				07FAC8BF14B2560200391B9C /* cat.cpp */,
+				07FAC8C014B2560200391B9C /* cat.h */,
+				07FAC8C214B25B9B00391B9C /* CatOwnedStates.cpp */,
+				07FAC8C314B25B9B00391B9C /* CatOwnedStates.h */,
 			);
 			path = miner;
 			sourceTree = "<group>";
@@ -115,6 +177,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6AC4149C476100449D0D /* main.cpp in Sources */,
+				078C6ACD149C479C00449D0D /* BaseGameEntity.cpp in Sources */,
+				078CF4A014A187DB008B30D1 /* Miner.cpp in Sources */,
+				075CC9D114A192BB00CEE144 /* MinerOwnedStates.cpp in Sources */,
+				071AAFFB14ABCA1F00DC736C /* EntityManager.cpp in Sources */,
+				07377A4D14ABD0620069A569 /* MessageDispatcher.cpp in Sources */,
+				0725EC6414ACE44500CCFB92 /* CrudeTimer.cpp in Sources */,
+				07FAC8BA14B2457100391B9C /* MinersWife.cpp in Sources */,
+				07FAC8BE14B2460200391B9C /* MinersWifeOwnedStates.cpp in Sources */,
+				07FAC8C114B2560200391B9C /* cat.cpp in Sources */,
+				07FAC8C414B25B9B00391B9C /* CatOwnedStates.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +266,7 @@
 				078C6ACA149C476100449D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

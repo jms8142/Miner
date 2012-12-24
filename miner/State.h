@@ -5,7 +5,6 @@
 //  miner
 //
 //  Created by John Skrzypek on 12/20/11.
-//  Copyright 2011 One Eleven Interactive. All rights reserved.
 //
 struct Telegram;
 
